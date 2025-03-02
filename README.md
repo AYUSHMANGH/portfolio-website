@@ -10,16 +10,11 @@ Welcome to my **personal portfolio website**! This is a fully responsive, animat
 
 ## 🛠️ Technologies Used
 - **HTML5**
-- **CSS3 & Tailwind CSS**
-- **JavaScript (Vanilla/GSAP for animations)**
-- **Bootstrap (if used)**
-- **Node.js & Express (if applicable)**
+- **CSS3**
 
 ## 🎥 Live Demo
 🔗 [Check out the live demo here](#) *(Replace with your live site URL)*
 
-## 📸 Screenshots
-*(Add screenshots here to showcase your website's UI)*
 
 ## 📩 Contact
 Want to connect? Reach me via:
@@ -32,8 +27,6 @@ Want to connect? Reach me via:
 - Improve accessibility & SEO 🌍
 - Enhance the music player UI 🎶
 
-## 📜 License
-This project is **open-source** under the [MIT License](LICENSE).
 
 ---
 ✨ **Made with passion & creativity!** ✨
