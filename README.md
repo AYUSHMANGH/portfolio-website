@@ -13,14 +13,13 @@ Welcome to my **personal portfolio website**! This is a fully responsive, animat
 - **CSS3**
 
 ## 🎥 Live Demo
-🔗 [Check out the live demo here](#) *(Replace with your live site URL)*
+🔗 [Check out the live demo here](#https://ayushmangh.github.io/portfolio-website/index.html)
 
 
 ## 📩 Contact
 Want to connect? Reach me via:
-- 📧 Email: your.email@example.com *(Replace with your email)*
-- 🌎 [LinkedIn](#) *(Replace with your LinkedIn URL)*
-- 🐦 [Twitter](#) *(Replace with your Twitter URL)*
+- 📧 Email: baishakhighosh28@gmail.com
+- 🌎 [LinkedIn](#https://www.linkedin.com/in/ayushman-ghosh-479233297/) 
 
 ## 💡 Future Improvements
 - Add more interactive elements 🔧
