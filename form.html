@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="form.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <video autoplay loop muted plays-inline class="back-vid">
+        <source src="galax.mp4" type="video/mp4">
+    </video>
+
+    <nav data-aos="fade-down" data-aos-duration="1000">
+        <h1 data-aos="zoom-in" data-aos-duration="1000"><span style="color: #4acfee;">Ayushman </span>Ghosh</h1>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <a href="index.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Home</a>
+            <a href="about.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">About</a>
+            <a href="projects.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Projects</a>
+            <a href="#skills" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"
+                onclick="alert('Coming soon!')">Skills</a>
+            <a href="form.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">Contact</a>
+        </div>
+    </nav>
+    <div class="contact-container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+            <div class="contact-left-title">
+                <h1 data-aos="fade-right" data-aos-duration="1000">Get in touch</h1>
+                <hr data-aos="fade-left" data-aos-duration="1000">
+            </div>
+            <input type="hidden" name="access_key" value="ad6a7a84-4747-4cc4-bd34-fe9541b6a07f">
+            <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required data-aos="fade-up"
+                data-aos-duration="1000" data-aos-delay="200">
+            <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required data-aos="fade-up"
+                data-aos-duration="1000" data-aos-delay="300">
+            <textarea name="message" placeholder="Your Message" class="contact-inputs" required data-aos="fade-up"
+                data-aos-duration="1000" data-aos-delay="400"></textarea>
+            <button type="submit" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500">Submit <img
+                    src="images/arrow_icon.png" alt=""></button>
+        </form>
+        <div class="contact-right" data-aos="zoom-in-left" data-aos-duration="2000">
+            <img src="images/right_img.png" alt="">
+        </div>
+    </div>
+
+    <audio controls autoplay loop class="audio" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+        <source src="images/H.mp3" type="audio/mp3">
+    </audio>
+
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const navigation = document.querySelector('.navigation');
+
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('active');
+            navigation.classList.toggle('active');
+        });
+    </script>
+
+    <div class="footer-container">
+        <div class="footer-left">
+            <h1></h1>
+            <p>2025 Made with By Ayushman Ghosh | All Rights Reserved</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
