@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AYUSHMAN GHOSH</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="about.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <video autoplay loop muted plays-inline class="back-vid">
+    <source src="images/nebula.mp4" type="video/mp4">
+  </video>
+  <section class="main-section">
+    <nav>
+      <h1 data-aos="zoom-in" data-aos-duration="1000"><span style="color: #ff1cec;">Ayushman </span>Ghosh</h1>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <a href="index.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Home</a>
+        <a href="about.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">About</a>
+        <a href="projects.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Projects</a>
+        <a href="#skills" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"
+          onclick="alert('Coming soon!')">Skills</a>
+        <a href="form.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">Contact</a>
+      </div>
+    </nav>
+    
+    <div class="hero">
+      <div class="hero-info">
+        <!-- <h1 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="700">About me</h1> -->
+        <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="900">About me</h2>
+        <p data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1000">Greetings! I am a dedicated individual with a strong educational background and a passion for technology and creativity. I completed my schooling at Kendriya Vidyalaya Ballygunge, where I excelled academically. In my 10th grade, I achieved a score of 90.1%, demonstrating my commitment to excellence. During my 12th grade, I specialized in Physics, Chemistry, and Mathematics (PCM) and secured an impressive 93.4%.</p>
+        <p data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1000">Continuing my educational journey, I am pursuing my Bachelor's degree in Computer Science and Engineering from St. Thomas' College of Engineering and Technology. Here, I will delve deep into the world of technology, honing my skills and knowledge in the field.</p>
+        <p data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1000">One of my standout skills is computer programming. I am proficient in various programming languages, enabling me to create innovative solutions and tackle complex problems in the realm of technology.</p>
+        <p data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1000">In terms of my nature, I am known for being helpful, always ready to assist others to the best of my abilities. I am a workaholic, finding fulfillment in dedicating myself to tasks and projects. Punctuality is a trait I hold, valuing the importance of time management and reliability in all aspects of life.</p>
+        <p data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1000">I am excited about the possibilities that the future holds, and I am eager to contribute my skills, knowledge, and enthusiasm to make a positive impact on the world around me.</p>
+        
+        <div class="Buttons" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">
+          <a href="images/resume.pdf" download class="btn resume-btn"><i class='bx bx-download'></i> My Resume</a>
+        </div>
+        
+      </div>
+
+      <div class="hero-img" data-aos="zoom-in-left" data-aos-duration="2500">
+        <img src="images/cc.png" alt="person-img" >
+      </div>
+    </div>
+    
+    <audio controls autoplay loop class="audio">
+      <source src="images/F.mp3" type="audio/mp3">
+    </audio>
+  </section>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script>
+    const menuBtn = document.querySelector('.menu-btn');
+    const navigation = document.querySelector('.navigation');
+
+    menuBtn.addEventListener('click', () => {
+      menuBtn.classList.toggle('active');
+      navigation.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

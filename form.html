@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="form.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <video autoplay loop muted plays-inline class="back-vid">
+        <source src="images/earth.mp4" type="video/mp4">
+    </video>
+
+    <div class="page-wrapper">
+        <nav data-aos="fade-down" data-aos-duration="1000">
+            <h1 data-aos="zoom-in" data-aos-duration="1000"><span style="color: #4acfee;">Ayushman </span>Ghosh</h1>
+            <div class="menu-btn"></div>
+            <div class="navigation">
+                <a href="index.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Home</a>
+                <a href="about.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">About</a>
+                <a href="projects.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Projects</a>
+                <a href="#skills" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"
+                    onclick="alert('Coming soon!')">Skills</a>
+                <a href="form.html" class="active" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">Contact</a>
+            </div>
+        </nav>
+        
+        <div class="contact-container">
+            <div class="contact-info" data-aos="fade-right" data-aos-duration="1000">
+                <h2>Contact Information</h2>
+                <p><i class='bx bx-envelope'></i> baishakhighosh28@gmail.com</p>
+                <p><i class='bx bx-phone'></i> +91 9830039708</p>
+                <p><i class='bx bx-map'></i> Kolkata, India</p>
+                
+                <div class="social-icons">
+                    <a href="https://github.com/AYUSHMANGH" target="_blank" class="social-icon"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com/in/ayushman-ghosh-479233297/" target="_blank" class="social-icon"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://in.pinterest.com/baishakhighosh28/" target="_blank" class="social-icon"><i class='bx bxl-pinterest'></i></a>
+                    <!-- <a href="#" target="_blank" class="social-icon"><i class='bx bxl-twitter'></i></a> -->
+                </div>
+            </div>
+            
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-left" data-aos="fade-left" data-aos-duration="1000">
+                <div class="contact-left-title">
+                    <h1 data-aos="fade-right" data-aos-duration="1000">Get in touch</h1>
+                    <hr data-aos="fade-left" data-aos-duration="1000">
+                </div>
+                <input type="hidden" name="access_key" value="ad6a7a84-4747-4cc4-bd34-fe9541b6a07f">
+                
+                <div class="input-group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <i class='bx bx-user input-icon'></i>
+                    <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+                </div>
+                
+                <div class="input-group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <i class='bx bx-envelope input-icon'></i>
+                    <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+                </div>
+                
+                <div class="input-group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <i class='bx bx-message-detail input-icon textarea-icon'></i>
+                    <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+                </div>
+                
+                <button type="submit" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500">
+                    <span>Submit</span>
+                    <i class='bx bx-send'></i>
+                </button>
+            </form>
+        </div>
+
+        <audio controls autoplay loop class="audio" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+            <source src="images/H.mp3" type="audio/mp3">
+        </audio>
+
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-social">
+                    <!-- <a href="#" class="footer-icon"><i class='bx bxl-github'></i></a>
+                    <a href="#" class="footer-icon"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#" class="footer-icon"><i class='bx bxl-instagram'></i></a> -->
+                </div>
+                <p>2025 Made with <i class='bx bxs-heart' style="color: #ff1cec;"></i> By Ayushman Ghosh | All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const navigation = document.querySelector('.navigation');
+
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('active');
+            navigation.classList.toggle('active');
+        });
+
+        // Form validation and animation
+        const form = document.querySelector('form');
+        const inputs = document.querySelectorAll('.contact-inputs');
+
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.classList.add('focused');
+            });
+            
+            input.addEventListener('blur', () => {
+                if (input.value === '') {
+                    input.parentElement.classList.remove('focused');
+                }
+            });
+        });
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const button = form.querySelector('button');
+            button.innerHTML = '<i class="bx bx-loader-alt bx-spin"></i> Sending...';
+            
+            // Simulate form submission
+            setTimeout(() => {
+                form.submit();
+            }, 1500);
+        });
+    </script>
+</body>
+
+</html>
