@@ -19,7 +19,7 @@ Welcome to my **personal portfolio website**! This is a fully responsive, animat
 ## 📩 Contact
 Want to connect? Reach me via:
 - 📧 Email: baishakhighosh28@gmail.com
-- 🌎 [LinkedIn](#https://www.linkedin.com/in/ayushman-ghosh-479233297/) 
+- 🌎 LinkedIn : (#https://www.linkedin.com/in/ayushman-ghosh-479233297/) 
 
 ## 💡 Future Improvements
 - Add more interactive elements 🔧
