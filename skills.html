@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="x-icon" href="images/logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AYUSHMAN GHOSH - Skills</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="skills.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+
+<body>
+  <video autoplay loop muted plays-inline class="back-vid">
+    <source src="images/red.mp4" type="video/mp4">
+  </video>
+  
+  <section class="main-section">
+    <nav>
+      <h1 data-aos="zoom-in" data-aos-duration="1000"><span style="color: #ff3d3d">Ayushman </span>Ghosh</h1>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <a href="index.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Home</a>
+        <a href="about.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">About</a>
+        <a href="projects.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Projects</a>
+        <a href="skills.html" class="active" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Skills</a>
+        <a href="form.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">Contact</a>
+      </div>
+    </nav>
+    
+    <div class="hero">
+      <div class="hero-info">
+        <h1 class="glow-text" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="700">My Skills</h1>
+        <p data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1000">Here are the technologies I work with</p>
+      </div>
+    </div>
+
+    <div class="skills-container">
+      <!-- Python -->
+      <div class="skill-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <div class="skill-icon icon-pulse">
+          <i class='bx bxl-python'></i>
+        </div>
+        <div class="skill-info">
+          <h3>Python</h3>
+        </div>
+      </div>
+
+      <!-- HTML -->
+      <div class="skill-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+        <div class="skill-icon icon-rotate">
+          <i class='bx bxl-html5'></i>
+        </div>
+        <div class="skill-info">
+          <h3>HTML</h3>
+        </div>
+      </div>
+
+      <!-- CSS -->
+      <div class="skill-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+        <div class="skill-icon icon-float">
+          <i class='bx bxl-css3'></i>
+        </div>
+        <div class="skill-info">
+          <h3>CSS</h3>
+        </div>
+      </div>
+
+      <!-- JavaScript -->
+      <div class="skill-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+        <div class="skill-icon icon-shake">
+          <i class='bx bxl-javascript'></i>
+        </div>
+        <div class="skill-info">
+          <h3>JavaScript</h3>
+        </div>
+      </div>
+
+      <!-- MySQL -->
+      <div class="skill-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+        <div class="skill-icon icon-pulse">
+          <i class='bx bxs-data'></i>
+        </div>
+        <div class="skill-info">
+          <h3>MySQL</h3>
+        </div>
+      </div>
+      
+      <!-- C Programming -->
+      <div class="skill-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
+        <div class="skill-icon icon-rotate">
+          <span class="c-icon">C</span>
+        </div>
+        <div class="skill-info">
+          <h3>C</h3>
+        </div>
+      </div>
+      
+      <!-- C++ -->
+      <div class="skill-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="750">
+        <div class="skill-icon icon-pulse">
+          <span class="cpp-icon">C++</span>
+        </div>
+        <div class="skill-info">
+          <h3>C++</h3>
+        </div>
+      </div>
+      
+      <!-- Java -->
+      <div class="skill-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+        <div class="skill-icon icon-float">
+          <i class='bx bxl-java'></i>
+        </div>
+        <div class="skill-info">
+          <h3>Java</h3>
+        </div>
+      </div>
+      
+      <!-- AutoCAD -->
+      <div class="skill-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900">
+        <div class="skill-icon icon-shake">
+          <i class='bx bxs-cube'></i>
+        </div>
+        <div class="skill-info">
+          <h3>AutoCAD</h3>
+        </div>
+      </div>
+      
+      <!-- Graphics Design -->
+      <div class="skill-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
+        <div class="skill-icon icon-pulse">
+          <i class='bx bxs-palette'></i>
+        </div>
+        <div class="skill-info">
+          <h3>Graphics Design</h3>
+        </div>
+      </div>
+    </div>
+    
+    <audio autoplay loop class="audio">
+      <source src="images/kk.mp3" type="audio/mp3">
+    </audio>
+  </section>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script>
+    const menuBtn = document.querySelector('.menu-btn');
+    const navigation = document.querySelector('.navigation');
+
+    menuBtn.addEventListener('click', () => {
+      menuBtn.classList.toggle('active');
+      navigation.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
