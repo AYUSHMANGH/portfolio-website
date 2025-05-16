@@ -5,6 +5,35 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Custom Scrollbar with RGB Gradient */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #ff3d3d, #ff6b3d, #ff3d7c, #ff3d3d);
+  border-radius: 10px;
+  background-size: 200% 200%;
+  animation: gradient-animation 5s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .audio {
   display: block;
   margin: 0 auto;
@@ -25,14 +54,17 @@ body{
   align-items: center;
 }
 
-.back-vid{
+.back-vid {
   position: fixed;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
   z-index: -1;
+  object-fit: cover;
+  background-color: #000;
 }
 
 

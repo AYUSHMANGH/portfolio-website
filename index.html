@@ -8,16 +8,31 @@
   <title>AYUSHMAN GHOSH</title>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="form.css">
+  <link rel="stylesheet" href="loader.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 </head>
 
 <body>
+  <!-- Loading Screen -->
+  <div class="loader-wrapper">
+    <video autoplay muted playsinline class="loader-video">
+      <source src="images/intro.mp4" type="video/mp4">
+    </video>
+    <audio autoplay loop class="loader-audio">
+      <source src="images/H.mp3" type="audio/mp3">
+    </audio>
+    <div class="stars"></div>
+    <div class="loader-content">
+      <h1 class="loader-title">AYUSHMAN GHOSH</h1>
+      <p class="loader-subtitle">Welcome to my digital universe</p>
+      <div class="loading-bar"></div>
+      <p class="loader-progress">0%</p>
+    </div>
+  </div>
 
-  <video autoplay loop muted plays-inline class="back-vid">
+  <video autoplay loop muted playsinline class="back-vid">
     <source src="images/galaxy.mp4" type="video/mp4">
   </video>
   <section class="main-section">
@@ -61,15 +76,16 @@
       </div>
     </div>
 
-    <audio controls autoplay loop class="audio">
+    <audio autoplay loop class="audio" preload="metadata">
       <source src="images/G.mp3" type="audio/mp3">
     </audio>
   </section>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init();
+    // AOS initialization will be handled by the loader script
+    // to ensure animations work properly after loading
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js" defer></script>
   <script>
     const menuBtn = document.querySelector('.menu-btn');
     const navigation = document.querySelector('.navigation');
@@ -79,7 +95,7 @@
       navigation.classList.toggle('active');
     });
   </script>
-
+  <script src="loader.js"></script>
 </body>
 
 

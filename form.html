@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <video autoplay loop muted plays-inline class="back-vid">
+    <video autoplay loop muted playsinline class="back-vid">
         <source src="images/earth.mp4" type="video/mp4">
     </video>
 
@@ -73,7 +73,7 @@
             </form>
         </div>
 
-        <audio controls autoplay loop class="audio" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+        <audio autoplay loop class="audio" preload="metadata">
             <source src="images/H.mp3" type="audio/mp3">
         </audio>
 
@@ -91,7 +91,10 @@
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init({
+            once: true,
+            disable: 'phone'
+        });
     </script>
     <script>
         const menuBtn = document.querySelector('.menu-btn');
