@@ -1,22 +1,28 @@
 // Create stars for the loading screen
 document.addEventListener('DOMContentLoaded', function() {
-    // Create stars
-    createStars();
-    
-    // Handle loading animation
+    // Use sessionStorage to show loader only once per session
     const loaderWrapper = document.querySelector('.loader-wrapper');
     const loaderProgress = document.querySelector('.loader-progress');
     const loaderAudio = document.querySelector('.loader-audio');
-    
+
+    if (sessionStorage.getItem('loaderShown')) {
+        // Loader already shown this session: remove/hide immediately
+        if (loaderWrapper) loaderWrapper.style.display = 'none';
+        document.body.style.overflow = '';
+        if (typeof AOS !== 'undefined') {
+            AOS.init({ once: true, disable: 'phone' });
+        }
+        return;
+    }
+    // Create stars
+    createStars();
     // Initially hide overflow to prevent scrolling during loading
     document.body.style.overflow = 'hidden';
-    
     // Set a fixed loading time of 8 seconds
     let progress = 0;
     const totalLoadingTime = 6700; // 8 seconds
     const updateInterval = 100; // Update every 100ms
     const progressIncrement = 100 / (totalLoadingTime / updateInterval);
-    
     const interval = setInterval(() => {
         progress += progressIncrement;
         progress = Math.min(progress, 100); // Ensure progress doesn't exceed 100
@@ -52,6 +58,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Remove loader from DOM after transition
                 setTimeout(() => {
                     loaderWrapper.remove();
+                    
+                    // Set session flag so loader does not show again this session
+                    sessionStorage.setItem('loaderShown', 'true');
                     
                     // Initialize AOS animations after loader is removed
                     if (typeof AOS !== 'undefined') {

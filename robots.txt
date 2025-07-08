@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://portfolio-website-phi-blush-97.vercel.app/sitemap.xml
