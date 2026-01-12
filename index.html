@@ -86,7 +86,6 @@
       </div>
     </nav>
 
-
     <div class="hero">
       <div class="hero-info">
         <h1 class="glow-text" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="700">Hi, I'm Ayushman Ghosh.</h1>
@@ -118,6 +117,23 @@
       </div>
     </div>
 
+    <div class="weather-widget" id="weather-time-widget" data-aos="fade-down" data-aos-duration="800">
+      <div class="weather-left">
+        <i class='bx bx-current-location'></i>
+        <span id="weather-location">Detecting location…</span>
+      </div>
+      <div class="weather-center">
+        <span id="weather-temp">--°C</span>
+        <span class="sep">•</span>
+        <span id="weather-icon" class="weather-icon" aria-hidden="true">⛅</span>
+        <span id="weather-cond">Loading weather…</span>
+      </div>
+      <div class="weather-right">
+        <i class='bx bx-time-five'></i>
+        <span id="weather-time">--</span>
+      </div>
+    </div>
+
     <audio autoplay loop class="audio" preload="metadata">
       <source src="images/G.mp3" type="audio/mp3">
     </audio>
@@ -137,6 +153,7 @@
       navigation.classList.toggle('active');
     });
   </script>
+  <script src="weather.js" defer></script>
   <script src="loader.js" defer></script>
 </body>
 
